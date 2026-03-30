@@ -1,15 +1,17 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import federation from "@originjs/vite-plugin-federation";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [
     react(),
+    tailwindcss(),
     federation({
       name: "coachingApp",
       filename: "remoteEntry.js",
       exposes: {
-        "./Widget": "./src/Widget.jsx",
+        "./TeamsPage": "./src/pages/teams/ui/Page.tsx",
       },
       shared: ["react", "react-dom"],
     }),
