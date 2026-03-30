@@ -11,7 +11,12 @@ export default defineConfig({
       name: "coachingApp",
       filename: "remoteEntry.js",
       exposes: {
-        "./TeamsPage": "./src/pages/teams/ui/Page.tsx",
+        "./TeamsPage": "./src/pages/teams/index.tsx",
+        "./BoardsPage": "./src/pages/boards/index.tsx",
+        "./WorkoutPlansPage": "./src/pages/workout-plans/index.tsx",
+        "./ExploreTeamsPage": "./src/pages/explore-teams/index.tsx",
+        "./MentorsPage": "./src/pages/mentors/index.tsx",
+        "./SuggestionPage": "./src/pages/suggestion/index.tsx",
       },
       shared: ["react", "react-dom"],
     }),
